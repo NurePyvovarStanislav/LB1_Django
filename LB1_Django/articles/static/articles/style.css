@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+.article-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.article-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.date {
+    color: #777;
+    font-size: 14px;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-right: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #2d7dd2;
+}
+
+.delete {
+    background-color: #d9534f;
+}
+
+.add {
+    background-color: #28a745;
+    margin-top: 15px;
+}
+
+.form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}

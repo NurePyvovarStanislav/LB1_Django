@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалення статті</title>
+    <link rel="stylesheet" href="{% static 'articles/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Видалення статті</h1>
+
+        <p>Ви дійсно хочете видалити статтю?</p>
+        <h2>{{ article.title }}</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn delete">Так, видалити</button>
+            <a href="{% url 'article_list' %}" class="btn">Скасувати</a>
+        </form>
+    </div>
+</body>
+</html>

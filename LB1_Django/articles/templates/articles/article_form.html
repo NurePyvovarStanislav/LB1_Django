@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Редагування статті</title>
+    <link rel="stylesheet" href="{% static 'articles/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Редагування статті</h1>
+
+        <form method="post" class="form">
+            {% csrf_token %}
+
+            <label for="title">Заголовок:</label>
+            <input type="text" id="title" name="title" value="{{ article.title }}" required>
+
+            <label for="text">Текст статті:</label>
+            <textarea id="text" name="text" rows="8" required>{{ article.text }}</textarea>
+
+            <button type="submit" class="btn edit">Зберегти</button>
+            <a href="{% url 'article_list' %}" class="btn">Назад</a>
+        </form>
+    </div>
+</body>
+</html>
